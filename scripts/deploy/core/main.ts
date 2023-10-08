@@ -3,6 +3,8 @@ import { deployCakeToken } from "./deployCakeToken";
 import { deploySyrupBar } from "./deploySyrup";
 import { deployMasterChef } from "./deployMasterChef";
 
+// npx hardhat run scripts/deploy/core/main.ts --network bkc_test
+
 const main = async () => {
   const [owner] = await ethers.getSigners();
   const block = await hre.ethers.provider.getBlock("latest");
