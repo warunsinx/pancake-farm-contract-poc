@@ -1,6 +1,6 @@
 import hre, { ethers } from "hardhat";
-import addresses from "../../utils/addresses";
-import { SyrupBar__factory } from "../../typechain-types";
+import addresses from "../../../utils/addressUtils";
+import { SyrupBar__factory } from "../../../typechain-types";
 
 export async function deploySyrupBar(cakeAddr: string) {
   const [owner] = await ethers.getSigners();

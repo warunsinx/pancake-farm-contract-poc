@@ -1,6 +1,6 @@
 import hre, { ethers } from "hardhat";
-import addresses from "../../utils/addresses";
-import { MockBEP20__factory } from "../../typechain-types";
+import addresses from "../../../utils/addressUtils";
+import { MockBEP20__factory } from "../../../typechain-types";
 
 export async function deployMockBEP20(symbol: string, totalSupply: string) {
   const [owner] = await ethers.getSigners();

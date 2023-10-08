@@ -1,6 +1,6 @@
 import hre, { ethers } from "hardhat";
-import addresses from "../../utils/addresses";
-import { MasterChef__factory } from "../../typechain-types";
+import addresses from "../../../utils/addressUtils";
+import { MasterChef__factory } from "../../../typechain-types";
 
 export async function deployMasterChef(
   cakeAddr: string,
@@ -20,7 +20,7 @@ export async function deployMasterChef(
     cakeAddr,
     syrupAddr,
     devAddr,
-    cakePerBlock,
+    ethers.parseEther(cakePerBlock),
     startBlock
   );
 

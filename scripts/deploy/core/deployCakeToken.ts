@@ -1,6 +1,6 @@
 import hre, { ethers } from "hardhat";
-import addresses from "../../utils/addresses";
-import { CakeToken__factory } from "../../typechain-types";
+import addresses from "../../../utils/addressUtils";
+import { CakeToken__factory } from "../../../typechain-types";
 
 export async function deployCakeToken() {
   const [owner] = await ethers.getSigners();
