@@ -25,4 +25,6 @@ export async function deployMockBEP20(symbol: string, totalSupply: string) {
   await addresses.saveAddresses(hre.network.name, {
     [`${symbol}`]: tokenAddr,
   });
+
+  return mockBEP20Token;
 }

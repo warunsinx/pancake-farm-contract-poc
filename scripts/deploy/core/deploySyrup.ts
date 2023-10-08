@@ -21,4 +21,6 @@ export async function deploySyrupBar(cakeAddr: string) {
   await addresses.saveAddresses(hre.network.name, {
     SyrupBar: syrupAddr,
   });
+
+  return syrupBar;
 }

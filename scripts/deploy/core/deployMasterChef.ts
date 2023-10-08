@@ -33,4 +33,6 @@ export async function deployMasterChef(
   await addresses.saveAddresses(hre.network.name, {
     MasterChef: masterChefAddr,
   });
+
+  return masterChef;
 }

@@ -21,4 +21,6 @@ export async function deployCakeToken() {
   await addresses.saveAddresses(hre.network.name, {
     CAKE: tokenAddr,
   });
+
+  return cakeToken;
 }
