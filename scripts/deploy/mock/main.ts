@@ -1,7 +1,7 @@
 import { ethers } from "hardhat";
-import { deployMockBEP20 } from "./core/deployMockBEP20";
+import { deployMockBEP20 } from "./deployMockBEP20";
 
-// npx hardhat run scripts/deploy/deployMockLP.ts --network bkc_test
+// npx hardhat run scripts/deploy/mock/main.ts --network bkc_test
 
 const main = async () => {
   const [, alice] = await ethers.getSigners();
