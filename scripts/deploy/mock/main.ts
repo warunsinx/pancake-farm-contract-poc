@@ -10,16 +10,6 @@ const main = async () => {
   await lp1
     .transfer(alice.address, ethers.parseEther("1000"))
     .then((tx) => tx.wait());
-
-  const lp2 = await deployMockBEP20("LP2", "1000000");
-  await lp2
-    .transfer(alice.address, ethers.parseEther("1000"))
-    .then((tx) => tx.wait());
-
-  const lp3 = await deployMockBEP20("LP3", "1000000");
-  await lp3
-    .transfer(alice.address, ethers.parseEther("1000"))
-    .then((tx) => tx.wait());
 };
 
 main().catch((error) => {

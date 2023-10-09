@@ -22,7 +22,7 @@ const main = async () => {
 
   console.log(
     "Alice's Cake balance:",
-    (await cake.balanceOf(alice.address)).toString()
+    ethers.formatEther(await cake.balanceOf(alice.address)).toString()
   );
 };
 

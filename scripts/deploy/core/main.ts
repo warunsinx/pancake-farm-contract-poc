@@ -24,7 +24,7 @@ const main = async () => {
     syrupAddr,
     owner.address,
     "40",
-    (block.number + 100).toString()
+    block.number.toString()
   );
   const masterChefAddr = await masterChef.getAddress();
 
