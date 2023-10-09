@@ -1,6 +1,5 @@
 import hre, { ethers } from "hardhat";
 import {
-  MockBEP20__factory,
   MasterChef__factory,
   CakeToken__factory,
 } from "../../../typechain-types";
@@ -12,7 +11,6 @@ const main = async () => {
   const [, alice] = await ethers.getSigners();
   const addressList = await addressUtils.getAddressList(hre.network.name);
 
-  const lp1 = MockBEP20__factory.connect(addressList["LP1"], alice);
   const cake = CakeToken__factory.connect(addressList["CAKE"], alice);
   const masterChef = MasterChef__factory.connect(
     addressList["MasterChef"],
